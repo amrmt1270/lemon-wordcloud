@@ -2,12 +2,28 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView: View {
-    @State private var words: [Word] = [] // 単語リスト
+    @State private var words: [WordItem] = [] // 単語リスト
     @State private var selectedTags: Set<String> = [] // 選択されたタグ（複数選択対応）
     @State private var showingFilterActionSheet = false // 絞り込みアクションシートの表示フラグ
     
     var body: some View {
         NavigationView {
+            TabView{
+                listView
+                    .tabItem{
+                        Label("List", systemImage: "house")
+                    }
+                WordCloudView()
+                    .tabItem{
+                        Label("wordCloud", systemImage: "person.circle")
+                    }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    var listView: some View{
+        NavigationView{
             VStack {
                 // タグ選択のUIを追加
                 ScrollView(.horizontal) {
@@ -73,7 +89,7 @@ struct ContentView: View {
     }
     
     // タグに基づいて単語をフィルタリングするメソッド
-    func filteredWords() -> [Word] {
+    func filteredWords() -> [WordItem] {
         if selectedTags.isEmpty {
             return words
         } else {
@@ -88,21 +104,10 @@ struct ContentView: View {
     }
 }
 
-// 単語データモデル
-struct Word: Identifiable {
-    let id = UUID()
-    let title: String
-    let detail: String
-    let image: Image? // 画像がある場合は表示する
-    let audioUrl: String // 音声ファイルのURL
-    let url: String
-    let tags: [String]
-    let date: Date
-}
 
 // 単語詳細ページ
 struct WordDetailView: View {
-    var word: Word
+    var word: WordItem
     @State private var audioPlayer: AVAudioPlayer?
     
     var body: some View {

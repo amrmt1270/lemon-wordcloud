@@ -14,6 +14,9 @@
 		57BEA9D42C912507004BC0D1 /* AddWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEA9D32C912507004BC0D1 /* AddWordView.swift */; };
 		57BEA9D62C912864004BC0D1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEA9D52C912864004BC0D1 /* ImagePicker.swift */; };
 		B14557F32C94468500D10F78 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B14557F22C94468500D10F78 /* .gitignore */; };
+		B145581D2C980E0100D10F78 /* WordCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B145581C2C980E0100D10F78 /* WordCloudView.swift */; };
+		B145581F2C980E1000D10F78 /* WordCloudViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B145581E2C980E1000D10F78 /* WordCloudViewViewModel.swift */; };
+		B14558212C9818CE00D10F78 /* WordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14558202C9818CE00D10F78 /* WordItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		57BEA9D32C912507004BC0D1 /* AddWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordView.swift; sourceTree = "<group>"; };
 		57BEA9D52C912864004BC0D1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B14557F22C94468500D10F78 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B145581C2C980E0100D10F78 /* WordCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCloudView.swift; sourceTree = "<group>"; };
+		B145581E2C980E1000D10F78 /* WordCloudViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCloudViewViewModel.swift; sourceTree = "<group>"; };
+		B14558202C9818CE00D10F78 /* WordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 			children = (
 				57BEA9C52C912381004BC0D1 /* lemon_wordcloudApp.swift */,
 				57BEA9C72C912381004BC0D1 /* ContentView.swift */,
+				B14558202C9818CE00D10F78 /* WordItem.swift */,
 				57BEA9C92C912382004BC0D1 /* Assets.xcassets */,
+				B145581C2C980E0100D10F78 /* WordCloudView.swift */,
+				B145581E2C980E1000D10F78 /* WordCloudViewViewModel.swift */,
 				57BEA9D32C912507004BC0D1 /* AddWordView.swift */,
 				57BEA9CB2C912382004BC0D1 /* Preview Content */,
 				57BEA9D52C912864004BC0D1 /* ImagePicker.swift */,
@@ -148,9 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				57BEA9D42C912507004BC0D1 /* AddWordView.swift in Sources */,
+				B14558212C9818CE00D10F78 /* WordItem.swift in Sources */,
 				57BEA9D62C912864004BC0D1 /* ImagePicker.swift in Sources */,
+				B145581D2C980E0100D10F78 /* WordCloudView.swift in Sources */,
 				57BEA9C82C912381004BC0D1 /* ContentView.swift in Sources */,
 				57BEA9C62C912381004BC0D1 /* lemon_wordcloudApp.swift in Sources */,
+				B145581F2C980E1000D10F78 /* WordCloudViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
