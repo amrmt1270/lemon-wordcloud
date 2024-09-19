@@ -2,7 +2,7 @@ import SwiftUI
 import AVFoundation
 
 struct AddWordView: View {
-    @Binding var words: [Word] // 親ビューから単語リストを参照
+    @Binding var words: [WordItem] // 親ビューから単語リストを参照
     
     @Environment(\.presentationMode) var presentationMode // 戻るための環境変数
     
@@ -178,7 +178,7 @@ struct AddWordView: View {
     
     // 単語を保存する関数
     func saveWord() {
-        let newWord = Word(title: wordTitle, detail: wordDetail, image: image, audioUrl: recordedAudioURL?.absoluteString ?? "", url: url, tags: tags, date: selectedDate)
+        let newWord = WordItem(title: wordTitle, detail: wordDetail, image: image, audioUrl: recordedAudioURL?.absoluteString ?? "", url: url, tags: tags, date: selectedDate)
         words.append(newWord)
         presentationMode.wrappedValue.dismiss()
     }
